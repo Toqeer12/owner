@@ -1,0 +1,211 @@
+ul.checkout-bar li/* 
+ * Droid Arabic Kufi (Arabic) http://www.google.com/webfonts/earlyaccess
+ */
+ .clearfix{*zoom:1}.clearfix:before,.clearfix:after{display:table;content:""}.clearfix:after{clear:both}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {display: block;}
+body {
+	color: #333;
+	direction: ltr;
+	font-weight: 400;
+	font-size: 12px;
+/*	font-family: 'Droid Arabic Kufi',Tahoma,Arial,Helvetica,sans-serif;*/
+	line-height: 1.1;
+	margin: 0;
+	padding: 0;
+}
+a { text-decoration: none;}
+
+
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Bold.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Bold.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Bold.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Bold.ttf) format('truetype');
+}
+@-webkit-keyframes myanimation {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 50%;
+  }
+}
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 10px;
+  padding: 1px 0;
+  color: #777;
+}
+
+.checkout-wrap {
+  color: #444;
+  max-width: 1100px;
+  position: relative;
+}
+
+ul.checkout-bar li {
+  color: #ccc;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  max-width:180px;
+  padding: 14px 10px 5px 45px;
+  margin:5px;
+  position: relative;
+}
+ul.checkout-bar li:before {
+/*  -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  background: #ddd;
+  border: 2px solid #FFF;
+  border-radius: 25%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  left: 20px;
+  line-height: 37px;
+  height: 35px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);*/
+  top: 4px;
+  width: 35px;
+  z-index: 999;
+}
+ul.checkout-bar li.active {
+  color: #F6FC06;
+  font-weight: bold;
+  float: right;
+}
+ul.checkout-bar li.active:before {
+/*  background: #F6FC06;
+  z-index: 99;*/
+}
+ul.checkout-bar li.visited {
+  background: #ECECEC;
+  color: #57aed1;
+  z-index: 99999;
+}
+ul.checkout-bar li.visited:before {
+  background: #57aed1;
+  z-index: 99999;
+}
+ul.checkout-bar li:nth-child(0):before {
+content:url(http://myfutureapps.com/delivery/originals/examples/navbar/happiness-icon-gif.gif);
+}
+
+ul.checkout-bar li:nth-child(1):before {
+content:url(http://myfutureapps.com/delivery/originals/examples/navbar/happiness-icon-gif.gif);
+}
+
+ul.checkout-bar li:nth-child(2):before {
+content:url(http://myfutureapps.com/delivery/originals/examples/navbar/happiness-icon-gif.gif);
+}
+ul.checkout-bar li:nth-child(3):before {
+content:url(http://myfutureapps.com/delivery/originals/examples/navbar/happiness-icon-gif.gif);
+}
+ul.checkout-bar li:nth-child(4):before {
+content:url(http://myfutureapps.com/delivery/originals/examples/navbar/happiness-icon-gif.gif);
+
+}
+ul.checkout-bar li:nth-child(5):before {
+content:url(http://myfutureapps.com/delivery/originals/examples/navbar/happiness-icon-gif.gif);
+}
+
+ul.checkout-bar li:nth-child(6):before {
+  content:url(http://myfutureapps.com/delivery/originals/examples/navbar/happiness-icon-gif.gif);
+
+}
+ul.checkout-bar li:nth-child(7):before {
+content: "8";
+}
+
+ul.checkout-bar a {
+  color: #57aed1;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media all and (min-width: 800px) {
+  .checkout-bar li.active:after {
+    -webkit-animation: myanimation 3s 0;
+    background-size: 35px 35px;
+    background-color: #F6FC06;
+    background-image: -webkit-linear-gradient(-45deg, rgba(79, 28, 0, 1) 25%, transparent 25%, transparent 50%, rgba(79, 28, 0, 1) 50%, rgba(79, 28, 0, 1) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    content: "";
+    height: 15px;
+    width: 100%;
+    left: 50%;
+    position: absolute;
+    top: -50px;
+    z-index: 0;
+  }
+
+  .checkout-wrap {
+    margin: 30px auto;
+  }
+
+  ul.checkout-bar {
+    -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    background-size: 35px 35px;
+    background-color: #EcEcEc;
+    background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+    border-radius: 15px;
+    height: 15px;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
+  ul.checkout-bar:before {
+    background-size: 35px 35px;
+    background-color: #57aed1;
+    background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    content: "";
+    height: 15px;
+    left: 0;
+    position: absolute;
+    width: 0%;
+  }
+  ul.checkout-bar li {
+    display: inline-block;
+    margin: 50px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 18%;
+  }
+  ul.checkout-bar li:before {
+    height: 45px;
+    left: 40%;
+    line-height: 45px;
+    position: absolute;
+    top: -65px;
+    width: 45px;
+    z-index: 99;
+  }
+ 
