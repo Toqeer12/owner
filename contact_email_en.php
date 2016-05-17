@@ -125,11 +125,11 @@
                                 </div>   
                                 <div class="formFieldWrap">
                                     <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>
-                                    <input type="text" name="contactNameField" value="<?php echo $_GET['name'];?>" class="contactField requiredField" id="contactNameField" />
+                                    <input type="text" name="contactNameField" value="<?php echo GetAgentName();?>" class="contactField requiredField" id="contactNameField" />
                                 </div>
                                 <div class="formFieldWrap">
                                     <label class="field-title contactEmailField" for="contactEmailField">Email: <span>(required)</span></label>
-                                    <input type="text" name="contactEmailField" value="<?php echo $_GET['id'];?>" class="contactField requiredField requiredEmailField" id="contactEmailField"/>
+                                    <input type="text" name="contactEmailField" value="<?php echo GetAgentEmail();?>" class="contactField requiredField requiredEmailField" id="contactEmailField"/>
                                 </div>
                                 <div class="formTextareaWrap">
                                     <label class="field-title contactMessageTextarea" for="contactMessageTextarea">Message: <span>(required)</span></label>

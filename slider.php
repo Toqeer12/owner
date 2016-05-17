@@ -35,8 +35,8 @@
             </div>
             
             <ul class="sidebar-navigation">
-                <li><a href="view_client_en.php"><i class="icon-amlac-gateway-property-expense"></i>Properties Expense<i class="fa fa-caret-right"></i></a></li>
-                <li><a href="#"><i class="icon-amlac-gateway-payment"></i>Payment<i class="fa fa-caret-right"></i></a></li>    
+                <li><a href="property_expense_en.php"><i class="icon-amlac-gateway-property-expense"></i>Properties Expense<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="payment_en.php"><i class="icon-amlac-gateway-payment"></i>Payment<i class="fa fa-caret-right"></i></a></li>    
                 <li><a href="#"><i class="icon-amlac-gateway-history"></i>History<i class="fa fa-caret-right"></i></a></li>    
                 <li><a href="contact_en_main.php"><i class="fa fa-envelope-o"></i>Contact<i class="fa fa-caret-right"></i></a></li>
                 <li><a href="logout.php"><i class="fa fa-mobile"></i>Logout<i class="fa fa-caret-right"></i></a></li>

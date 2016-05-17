@@ -29,10 +29,10 @@ include 'raw_file.php';
             </div>
             
             <ul class="sidebar-navigation">
-                <li><a href="view_client_en.php"><i class="icon-amlac-gateway-property-expense"></i>Properties Expense<i class="fa fa-caret-right"></i></a></li>
-                <li><a href="#"><i class="icon-amlac-gateway-payment"></i>Payment<i class="fa fa-caret-right"></i></a></li>    
+                <li><a href="property_expense_ar.php"><i class="icon-amlac-gateway-property-expense"></i>النفقات الملكية<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="payment_ar.php"><i class="icon-amlac-gateway-payment"></i>دفع<i class="fa fa-caret-right"></i></a></li>    
                 <li><a href="#"><i class="icon-amlac-gateway-history"></i>History<i class="fa fa-caret-right"></i></a></li>    
-                <li><a href="contact_en_main.php"><i class="fa fa-envelope-o"></i>Contact<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="contact.php"><i class="fa fa-envelope-o"></i>اتصال<i class="fa fa-caret-right"></i></a></li>
                 <li><a href="logout.php"><i class="fa fa-mobile"></i>تسجيل الخروج<i class="fa fa-caret-right"></i></a></li>
                 
             </ul>

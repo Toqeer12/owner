@@ -170,7 +170,7 @@ session_start();
     margin-left: 55px;">Lease</div>
  	</div>
 </a>     
-<a href="#">  
+<a href="property_expense_en.php">  
    	<div class="col span_3_of_4">
     <img src="images/notification.png" style="
     height: 60px;
@@ -180,7 +180,7 @@ session_start();
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 55px;">Notification</div>
+    margin-left: 55px;">Property Expense</div>
  	</div>
  </a>
  
@@ -197,7 +197,7 @@ session_start();
     margin-left: 50px;">Contact</div>
  	</div>
  </a>
- <a href="support_en.php" >  
+ <a href="payment_en.php" >  
 	<div class="col span_2_of_4">
     <img src="images/support.png" style="
     height: 60px;
@@ -207,7 +207,7 @@ session_start();
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 50px;">Support</div>
+    margin-left: 50px;">Payment</div>
  	</div>
 </a>
 </div>

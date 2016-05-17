@@ -1,10 +1,13 @@
-<?php
+<?php  
 
 session_start();
 
 ?>
 
-<!DOCTYPE HTML><head>
+
+<!DOCTYPE HTML >
+
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -50,6 +53,7 @@ session_start();
 		/* Force table to not be like tables anymore */
 		table, thead, tbody, th, td, tr { 
 			display: block; 
+ 
 		}
 		
 		/* Hide table headers (but not display: none;, for accessibility) */
@@ -57,6 +61,7 @@ session_start();
 			position: absolute;
 			top: -9999px;
 			left: -7777px;
+ 
 		}
 		
 		tr { border: 1px solid #ccc; }
@@ -86,14 +91,13 @@ session_start();
 		
 		td:nth-of-type(1):before { content: "Sr #"; }
 		td:nth-of-type(2):before { content: "Property Name"; }
-		td:nth-of-type(3):before { content: "Writing Contract Date"; }
-		td:nth-of-type(4):before { content: "Contract Start Date"; }
-		td:nth-of-type(5):before { content: "Contract End Date"; }
-		td:nth-of-type(6):before { content: "Renter"; }
-		td:nth-of-type(7):before { content: "Owner"; }
-		td:nth-of-type(8):before { content: "Duration"; }
-		td:nth-of-type(9):before { content: "Schudle Month"; }
- 
+		td:nth-of-type(3):before { content: "Unit #"; }
+ 		td:nth-of-type(4):before { content: "Type"; }
+		td:nth-of-type(5):before { content: "Vendor"; }
+		td:nth-of-type(6):before { content: "Bill"; }
+		td:nth-of-type(7):before { content: "Amount"; }
+        td:nth-of-type(8):before { content: "Date"; }
+ 		td:nth-of-type(9):before { content: "Notes"; }
 	  }
 	}
 	
@@ -103,7 +107,8 @@ session_start();
 	and (max-device-width : 480px) {
 		body { 
 			padding: 0; 
-			margin: 0; 
+			margin: 0;
+            direction:rtl; 
 			width: 420px; }
 		}
 	
@@ -111,6 +116,7 @@ session_start();
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 		body { 
 			width: 495px; 
+            direction:rtl;
 		}
 	}
 	
@@ -133,7 +139,14 @@ session_start();
     
     
 <?php include("language_selector.php")?>
- 
+
+<!--<div class="header">
+    <a href="#" class="main-logo"></a>
+    <div class="header-controls">
+        <a href="#" class="open-more"><i class="fa fa-envelope"></i></a>
+        <a href="#" class="open-slide"><i class="fa fa-star"></i></a>
+        <a href="#" class="open-menu"><i class="fa fa-navicon"></i></a>
+    </div>-->
     <div class="header">
     <a href="#" class="main-logo"></a>
     <div class="header-controls">
@@ -145,7 +158,7 @@ session_start();
        
 <div class="all-elements">
     <div class="snap-drawers">
-  
+    
         <div class="snap-drawer snap-drawer-left">
       
             
@@ -175,15 +188,16 @@ session_start();
         <?php include("slider_ar.php");?>
     <!-- Page Content-->
     <div id="content" class="snap-content">
-		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">Lease Details</div>
 
         
-    <div id="page-wrap">
+		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">Client Details </div>
+
+ 	<div id="page-wrap">
 
 
 
     
-	<table>
+	<table style = "direction:rtl";>
 		<thead>
  
 		</thead>
@@ -191,36 +205,38 @@ session_start();
 		
 			
 			<?php 
-	 		$owner = $_SESSION['Id'];
+		    $owner = $_SESSION['Id'];
 			$cid = $_SESSION['real_state'];
- 			$LeaseDetail =LeaseDetailOwner($owner,$cid);
+			$propertyDetail =PropertyExpense($owner,$cid);
 		
-			for($i=0; $i<count($LeaseDetail); $i++)
+			for($i=0; $i<count($propertyDetail); $i++)
 			{
 			?>
 			<tr>
 			<td><?php echo $i+1;?></td>
-			<td><?php echo propertyName($LeaseDetail[$i]['property_name']);?></td>
-			<td><?php echo $LeaseDetail[$i]['write_con_dat']; ?></td>
-			<td><?php echo $LeaseDetail[$i]['start_date'];?></td>
-			<td><?php echo $LeaseDetail[$i]['ending_date'];?></td>
-			<td><?php echo clientDetail($LeaseDetail[$i]['renter']);?></td>
-			<td><?php echo clientDetail($LeaseDetail[$i]['owner']);?></td>
-			<td><?php echo $LeaseDetail[$i]['duration'];?></td>			
-			<td><?php echo $LeaseDetail[$i]['schudle_month'];?></td>			
-		</tr>
-		 <?php }?>  
+			<td><?php echo $propertyDetail[$i]['propname'];?></td>
+ 			<td><?php echo $propertyDetail[$i]['unitt'];?></td>
+			<td><?php echo $propertyDetail[$i]['type'];?></td>
+			<td><?php echo clientDetail($propertyDetail[$i]['vendor']);?></td>
+			<td><?php echo $propertyDetail[$i]['bill'];?></td>
+			<td><?php echo $propertyDetail[$i]['amount'];?></td>		
+            <td><?php echo $propertyDetail[$i]['vendor'];?></td>		
+			<td><?php echo $propertyDetail[$i]['datee'];?></td>	
+
+ 		</tr>
+		 <?php }?>
 		</tbody>
 	</table>
 	
 	</div>
-
-       
- 
+        
+        <!-- Page Footer-->
+    
  
     </div>
     
  
+    
 </div>
 
 </body>

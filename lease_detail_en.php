@@ -181,8 +181,9 @@ session_start();
 		
 			
 			<?php 
-			$var = $_SESSION['Id'];
-			$LeaseDetail =LeaseDetail($var);
+			 $owner = $_SESSION['Id'];
+			$cid = $_SESSION['real_state'];
+ 			$LeaseDetail =LeaseDetailOwner($owner,$cid);
 		
 			for($i=0; $i<count($LeaseDetail); $i++)
 			{

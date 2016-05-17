@@ -153,9 +153,9 @@
     
     <!-- Page Content-->
     <div id="content" class="snap-content">
-
-		   <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:left;  margin-top:20px"  value="Contact With Owner"  onclick="contact(this)"/>
-   <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:right; margin-top:20px"  value="Contact With Leaser" onclick="contact2(this)" />           
+		<div style="float:left;  margin-top:20px; margin-left:100px" >
+		   <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton"  value="Contact With Agent"  onclick="contact(this)"/>
+		   </div>
        
      <div id="result" style="margin-top:100px">
               </div>    
@@ -170,13 +170,9 @@
     function contact(obj)
     {
         alert("hello");
-       $("#result").load("contact_en.php?id=1");
+       window.location = ("contact_email_en.php");
     }
-        function contact2(obj)
-    {
-        alert("hello");
-       $("#result").load("contact_en.php?id=2");
-    }
+ 
     </script>
  
  

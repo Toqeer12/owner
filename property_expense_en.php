@@ -1,9 +1,7 @@
+
 <?php
-
 session_start();
-
 ?>
-
 <!DOCTYPE HTML><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
@@ -23,8 +21,7 @@ session_start();
 <link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"   media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)"/>
 
 <title>Fish Market</title>
-<link rel="stylesheet" href="css2/style.css">
-
+<link rel="stylesheet"                   href="css2/style.css">
 <link href="styles/style.css"     		 rel="stylesheet" type="text/css">
 <link href="styles/framework.css" 		 rel="stylesheet" type="text/css">
 <link href="styles/owl.theme.css" 		 rel="stylesheet" type="text/css">
@@ -36,7 +33,10 @@ session_start();
 <script type="text/javascript" src="scripts/jqueryui.js"></script>
 <script type="text/javascript" src="scripts/framework.plugins.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-<style>
+
+
+
+ 	<style>
 	
 	/* 
 	Max width before this PARTICULAR table gets nasty
@@ -59,7 +59,7 @@ session_start();
 			left: -7777px;
 		}
 		
-		tr { border: 1px solid #ccc; }
+		tr { border: 3px solid #ccc; }
 		
 		td { 
 			/* Behave  like a "row" */
@@ -77,8 +77,7 @@ session_start();
 			left: 6px;
 			width: 85%; 
 			padding-right: 5px; 
-			white-space: nowrap;
-		}
+ 		}
 		
 		/*
 		Label the data
@@ -86,14 +85,13 @@ session_start();
 		
 		td:nth-of-type(1):before { content: "Sr #"; }
 		td:nth-of-type(2):before { content: "Property Name"; }
-		td:nth-of-type(3):before { content: "Writing Contract Date"; }
-		td:nth-of-type(4):before { content: "Contract Start Date"; }
-		td:nth-of-type(5):before { content: "Contract End Date"; }
-		td:nth-of-type(6):before { content: "Renter"; }
-		td:nth-of-type(7):before { content: "Owner"; }
-		td:nth-of-type(8):before { content: "Duration"; }
-		td:nth-of-type(9):before { content: "Schudle Month"; }
- 
+		td:nth-of-type(3):before { content: "Unit #"; }
+ 		td:nth-of-type(4):before { content: "Type"; }
+		td:nth-of-type(5):before { content: "Vendor"; }
+		td:nth-of-type(6):before { content: "Bill"; }
+		td:nth-of-type(7):before { content: "Amount"; }
+        td:nth-of-type(8):before { content: "Date"; }
+ 		td:nth-of-type(9):before { content: "Notes"; }
 	  }
 	}
 	
@@ -104,13 +102,13 @@ session_start();
 		body { 
 			padding: 0; 
 			margin: 0; 
-			width: 420px; }
+			width: 520px; }
 		}
 	
 	/* iPads (portrait and landscape) ----------- */
 	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 		body { 
-			width: 495px; 
+			width: 595px; 
 		}
 	}
 	
@@ -120,70 +118,51 @@ session_start();
 
 <div id="preloader">
 	<div id="status">
-    	<p class="center-text">
+<!--    	<p class="center-text">
 			يرجى الانتظار.....
             <em>جاري عرض البيانات...</em>
-        </p>
-<!--        <p class="center-text">
+        </p>-->
+        <p class="center-text">
 			Loading the content...
             <em>Loading depends on your connection speed!</em>
-        </p>-->
+        </p>
     </div>
 </div>
     
     
 <?php include("language_selector.php")?>
+
  
-    <div class="header">
-    <a href="#" class="main-logo"></a>
-    <div class="header-controls">
-        <a href="#" class="open-more"><i class="fa fa-navicon"></i></a>
-        <a href="#" class="open-slide"><i class="fa fa-globe"></i></a>
-      
-    </div>
-</div>
        
 <div class="all-elements">
     <div class="snap-drawers">
-  
+        <!-- Left Sidebar -->
         <div class="snap-drawer snap-drawer-left">
-      
-            
-            <div class="sidebar-divider">
-                Navigation
-            </div>
                        
-            <div class="sidebar-divider">
-                by Arrowtec LLC 2016
-            </div>
-        </div>
-        <div class="snap-drawer snap-drawer-right">
-            <div class="sidebar-header">
-
-               
-            </div>
-                    
             <div class="sidebar-divider"  align="center" >
-                الرئيسية
+                Welcome
             </div>     
             
             <ul class="sidebar-navigation">
-                <li><a href="ar_welcome.php"><i class="fa fa-home"></i>العودة للرئيسية<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="en_welcome.php"><i class="fa fa-home"></i>Back to Main Page<i class="fa fa-caret-right"></i></a></li>
             </ul>
-            
+            <?php include("slider.php")?>
  
-        <?php include("slider_ar.php");?>
+        </div>
+    </div>
+     
     <!-- Page Content-->
     <div id="content" class="snap-content">
-		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">Lease Details</div>
+		<div style="margin-top:30px; padding-top:10px; text-align:center; height:40px; background:#27B2B9;Color:#000000;">Property Expense Details </div>
 
-        
-    <div id="page-wrap">
+	<div id="page-wrap">
 
 
 
     
-	<table>
+	<table style="
+    width: 300px;
+">
 		<thead>
  
 		</thead>
@@ -191,36 +170,36 @@ session_start();
 		
 			
 			<?php 
-	 		$owner = $_SESSION['Id'];
+		    $owner = $_SESSION['Id'];
 			$cid = $_SESSION['real_state'];
- 			$LeaseDetail =LeaseDetailOwner($owner,$cid);
+			$propertyDetail =PropertyExpense($owner,$cid);
 		
-			for($i=0; $i<count($LeaseDetail); $i++)
+			for($i=0; $i<count($propertyDetail); $i++)
 			{
 			?>
 			<tr>
 			<td><?php echo $i+1;?></td>
-			<td><?php echo propertyName($LeaseDetail[$i]['property_name']);?></td>
-			<td><?php echo $LeaseDetail[$i]['write_con_dat']; ?></td>
-			<td><?php echo $LeaseDetail[$i]['start_date'];?></td>
-			<td><?php echo $LeaseDetail[$i]['ending_date'];?></td>
-			<td><?php echo clientDetail($LeaseDetail[$i]['renter']);?></td>
-			<td><?php echo clientDetail($LeaseDetail[$i]['owner']);?></td>
-			<td><?php echo $LeaseDetail[$i]['duration'];?></td>			
-			<td><?php echo $LeaseDetail[$i]['schudle_month'];?></td>			
-		</tr>
-		 <?php }?>  
+			<td><?php echo $propertyDetail[$i]['propname'];?></td>
+ 			<td><?php echo $propertyDetail[$i]['unitt'];?></td>
+			<td><?php echo $propertyDetail[$i]['type'];?></td>
+			<td><?php echo clientDetail($propertyDetail[$i]['vendor']);?></td>
+			<td><?php echo $propertyDetail[$i]['bill'];?></td>
+			<td><?php echo $propertyDetail[$i]['amount'];?></td>		
+            <td><?php echo $propertyDetail[$i]['vendor'];?></td>		
+			<td><?php echo $propertyDetail[$i]['datee'];?></td>		
+
+ 		</tr>
+		 <?php }?>
 		</tbody>
 	</table>
 	
 	</div>
-
-       
- 
+     
  
     </div>
     
- 
+
+    
 </div>
 
 </body>

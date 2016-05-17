@@ -170,8 +170,9 @@ session_start();
 		
 			
 			<?php 
-			$var = $_SESSION['Id'];
-			$propertyDetail =Unitdetail($var);
+			 $owner = $_SESSION['Id'];
+			$cid = $_SESSION['real_state'];
+			$propertyDetail =Unitdetailowner($owner,$cid);
 		
 			for($i=0; $i<count($propertyDetail); $i++)
 			{

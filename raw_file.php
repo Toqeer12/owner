@@ -315,4 +315,129 @@ function propertyDetailOwner($var,$cid)
     
     
 }
+
+function  Unitdetailowner($owner,$cid)
+{
+    global $array8;
+        $sql= "SELECT * From real_state_unit Where owner_id='$owner' And cid='$cid'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
+
+		if($result) 
+        {
+		 if(mysql_num_rows($result) > 0)
+                {
+                        while($member  = mysql_fetch_assoc($result))
+                        {
+                        
+                    
+                            $array8[]=$member;
+                        }
+                 }
+        }
+        return $array8;
+    
+}
+
+
+function LeaseDetailOwner($owner,$cid)
+{   
+    global $array2;
+    		$sql= "SELECT * From rent_property where owner='$owner' And cid='$cid'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
+
+		if($result) 
+        {
+			 if(mysql_num_rows($result) > 0)
+				 {
+                   While($member  = mysql_fetch_assoc($result))
+                      {
+                            $array2[]=$member;
+                        }                  
+                 }
+        }
+        return $array2;
+    
+    
+    
+    
+}
+
+function PropertyExpense($owner,$cid)
+{   
+    global $array2;
+    		$sql= "SELECT * From property_expense where owner_id='$owner' And cid='$cid'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
+
+		if($result) 
+        {
+			 if(mysql_num_rows($result) > 0)
+				 {
+                   While($member  = mysql_fetch_assoc($result))
+                      {
+                            $array2[]=$member;
+                        }                  
+                 }
+        }
+        return $array2;
+    
+    
+    
+    
+}
+
+function Payment($owner,$cid)
+{   
+    global $array2;
+    		$sql= "SELECT * From paid_amount where owner_id='$owner' And cid='$cid'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
+
+		if($result) 
+        {
+			 if(mysql_num_rows($result) > 0)
+				 {
+                   While($member  = mysql_fetch_assoc($result))
+                      {
+                            $array2[]=$member;
+                        }                  
+                 }
+        }
+        return $array2;
+}
+
+function GetAgentEmail()
+{   
+    global $array2;
+    		$sql= "SELECT * From registration where Id='".$_SESSION['real_state']."'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
+
+		if($result) 
+        {
+			 if(mysql_num_rows($result) > 0)
+				 {
+                   While($member  = mysql_fetch_assoc($result))
+                      {
+                            $array2=$member['email'];
+                        }                  
+                 }
+        }
+        return $array2;
+}
+function GetAgentName()
+{   
+    global $array2;
+    		$sql= "SELECT * From registration where Id='".$_SESSION['real_state']."'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
+
+		if($result) 
+        {
+			 if(mysql_num_rows($result) > 0)
+				 {
+                   While($member  = mysql_fetch_assoc($result))
+                      {
+                            $array2=$member['full_name'];
+                        }                  
+                 }
+        }
+        return $array2;
+}
 ?>

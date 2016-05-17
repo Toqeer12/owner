@@ -190,9 +190,8 @@ session_start();
         
  
  
-   <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:left;  margin-top:20px"    value="Contact With Owner"  onclick="contact(this)"/>
-   <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:right; margin-top:20px;"   value="Contact With Leaser" onclick="contact2(this)" />           
-       
+   <input type="submit" class="buttonWrap2 button button-green contactSubmitButton" id="contactSubmitButton" style="float:left;  margin-top:20px"    value="Contact With Agent"  onclick="contact(this)"/>
+        
      <div id="result" style="margin-top:100px">
               </div>    
     
@@ -209,14 +208,9 @@ session_start();
  <script type="text/javascript">
     function contact(obj)
     {
-        alert("hello");
-       $("#result").load("contact_en.php?id=1");
-    }
-        function contact2(obj)
-    {
-        alert("hello");
-       $("#result").load("contact_en.php?id=2");
-    }
+		window.location("contact_main.php");	
+  }
+
     </script>
  
  

@@ -181,7 +181,7 @@
     margin-left: 55px;">عقود الإيجار</div>
  	</div>
 </a>     
-<a href="#">  
+<a href="property_expense_ar.php">  
    	<div class="col span_3_of_4">
     <img src="images/notification.png" style="
     height: 60px;
@@ -191,11 +191,11 @@
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 55px;">الإشعارات</div>
+    margin-left: 55px;">النفقات الملكية</div>
  	</div>
  </a>
  
- <a href="contact_en_main.php">  
+ <a href="contact.php">  
     <div class="col span_3_of_4">   
    <img src="images/contact.png" style="
     height: 60px;
@@ -205,10 +205,10 @@
    <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 50px;">Contact</div>
+    margin-left: 50px;">اتصال</div>
  	</div>
  </a>
- <a href="support_en.php" >  
+ <a href="payment_ar.php" >  
 	<div class="col span_2_of_4">
     <img src="images/support.png" style="
     height: 60px;
@@ -218,7 +218,7 @@
     <div style=" 
     margin-top: 10px;
     Color:WHITE;
-    margin-left: 50px;">الدعم الفني </div>
+    margin-left: 50px;">دفع</div>
  	</div>
 </a>
 </div>
