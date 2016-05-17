@@ -170,8 +170,9 @@
 		
 			
 			<?php 
-			$var = $_SESSION['Id'];
-			$propertyDetail =propertyDetail($var);
+			$owner = $_SESSION['Id'];
+			$cid = $_SESSION['real_state'];
+			$propertyDetail =propertyDetailOwner($owner,$cid);
 		
 			for($i=0; $i<count($propertyDetail); $i++)
 			{
@@ -185,7 +186,7 @@
 			<td><?php echo $propertyDetail[$i]['about_him'];?></td>
 			<td><?php echo clientDetail($propertyDetail[$i]['owner_id']);?></td>
 			<td><?php echo $propertyDetail[$i]['inst_no'];?></td>			
-	        <td><?php echo viewpropertyUnit($propertyDetail[$i]['owner_id'],$propertyDetail[$i]['id'],$var);?></td>	
+	        <td><?php echo viewpropertyUnit($propertyDetail[$i]['owner_id'],$propertyDetail[$i]['id'],$cid);?></td>	
 		</tr>
 		 <?php }?>
 		</tbody>

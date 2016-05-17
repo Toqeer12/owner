@@ -3,6 +3,7 @@
 
 ?>
 
+ 
 <link href="https://file.myfontastic.com/ZSnddKnFtxCstKLTvA9YaU/icons.css" rel="stylesheet">
         <!-- <div class="sidebar-logo"></div>-->
           <img src="<?php echo logo()?>" alt="" style="   background-repeat:no-repeat;
@@ -14,7 +15,7 @@
     margin-left:55px;"/>
     
     <div style="margin-left:80px; font-size:20px;margin-bottom: 10px;margin-top: -20px;"><?php  
-    echo $_SESSION['company'];?></div>
+    echo companyname();?></div>
     
            <ul class="sidebar-navigation">
            
@@ -34,10 +35,10 @@
             </div>
             
             <ul class="sidebar-navigation">
-                <li><a href="view_client_en.php"><i data-icon="a"></i>View All Client<i class="fa fa-caret-right"></i></a></li>
-                <li><a href="#"><i class="icon-amlac-gateway-notifications"></i>Notification<i class="fa fa-caret-right"></i></a></li>    
+                <li><a href="view_client_en.php"><i class="icon-amlac-gateway-property-expense"></i>Properties Expense<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="#"><i class="icon-amlac-gateway-payment"></i>Payment<i class="fa fa-caret-right"></i></a></li>    
+                <li><a href="#"><i class="icon-amlac-gateway-history"></i>History<i class="fa fa-caret-right"></i></a></li>    
                 <li><a href="contact_en_main.php"><i class="fa fa-envelope-o"></i>Contact<i class="fa fa-caret-right"></i></a></li>
-                <li><a href="support_en.php"><i data-icon="m"></i>Support<i class="fa fa-caret-right"></i></a></li>
                 <li><a href="logout.php"><i class="fa fa-mobile"></i>Logout<i class="fa fa-caret-right"></i></a></li>
             </ul>
             

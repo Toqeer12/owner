@@ -3,7 +3,7 @@ include 'raw_file.php';
 
 ?>
 
-<link href="https://file.myfontastic.com/ATjsLZgCiy8iWYz4pGBPXa/icons.css" rel="stylesheet">       
+<link href="https://file.myfontastic.com/ZSnddKnFtxCstKLTvA9YaU/icons.css" rel="stylesheet">
           
                     <img src="<?php echo logo()?>" alt="" style="   background-repeat:no-repeat;
     width:160px;
@@ -13,7 +13,7 @@ include 'raw_file.php';
     margin-bottom:30px;
     margin-left:55px;"/>
               <div style="margin-left:80px; font-size:20px; margin-bottom: 10px;margin-top: -20px;"><?php  
-    echo $_SESSION['company'];?></div>
+    echo companyname();?></div>
              <div class="sidebar-divider"  align="center" >
                 الطلبات و المشتريات
             </div>     
@@ -29,10 +29,10 @@ include 'raw_file.php';
             </div>
             
             <ul class="sidebar-navigation">
-                <li><a href="view_property_ar.php"> <i data-icon="a"></i>أسعار السوق اليوم<i class="fa fa-caret-right"></i></a></li>
-                <li><a href="#">                    <i class="icon-amlac-gateway-notifications"></i>الإشعارات <i class="fa fa-caret-right"></i></a></li>
-                <li><a href="contact.php"><i class="fa fa-envelope-o"></i>تواصل معنا<i class="fa fa-caret-right"></i></a></li>
-                <li><a href="support_ar.php"><i data-icon="m"></i>الدعم الفني <i class="fa fa-caret-right"></i></a></li>
+                <li><a href="view_client_en.php"><i class="icon-amlac-gateway-property-expense"></i>Properties Expense<i class="fa fa-caret-right"></i></a></li>
+                <li><a href="#"><i class="icon-amlac-gateway-payment"></i>Payment<i class="fa fa-caret-right"></i></a></li>    
+                <li><a href="#"><i class="icon-amlac-gateway-history"></i>History<i class="fa fa-caret-right"></i></a></li>    
+                <li><a href="contact_en_main.php"><i class="fa fa-envelope-o"></i>Contact<i class="fa fa-caret-right"></i></a></li>
                 <li><a href="logout.php"><i class="fa fa-mobile"></i>تسجيل الخروج<i class="fa fa-caret-right"></i></a></li>
                 
             </ul>

@@ -5,7 +5,7 @@
 
 function logo()
 {
-    		$sql= "SELECT * From images_tbl where cid='".$_SESSION['Id']."'";   
+    		$sql= "SELECT * From images_tbl where cid='".$_SESSION['real_state']."'";   
 		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
 
 		if($result) 
@@ -14,6 +14,25 @@ function logo()
 				 {
                     $member  = mysql_fetch_assoc($result);
                     echo $member['images_path'];
+                 }
+        }
+    
+    
+    
+    
+}
+
+function companyname()
+{
+    		$sql= "SELECT * From registration where id='".$_SESSION['real_state']."'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
+
+		if($result) 
+        {
+			 if(mysql_num_rows($result) > 0)
+				 {
+                    $member  = mysql_fetch_assoc($result);
+                    echo $member['comp_name'];
                  }
         }
     
@@ -274,5 +293,26 @@ function Renterdetail($var)
         }
         return $array3;
 }
+function propertyDetailOwner($var,$cid)
+{   
+    global $array2;
+    		$sql= "SELECT * From add_property where cid='$cid' AND owner_id='$var'";   
+		$result=mysql_query($sql)or  die('Invalid query: ' . mysql_error());
 
+		if($result) 
+        {
+			 if(mysql_num_rows($result) > 0)
+				 {
+                   While($member  = mysql_fetch_assoc($result))
+                      {
+                            $array2[]=$member;
+                        }                  
+                 }
+        }
+        return $array2;
+    
+    
+    
+    
+}
 ?>
