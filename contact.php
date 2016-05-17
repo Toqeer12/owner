@@ -208,7 +208,7 @@ session_start();
  <script type="text/javascript">
     function contact(obj)
     {
-		window.location("contact_main.php");	
+		window.location=("contact_main.php");	
   }
 
     </script>

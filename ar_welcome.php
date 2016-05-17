@@ -183,7 +183,7 @@
 </a>     
 <a href="property_expense_ar.php">  
    	<div class="col span_3_of_4">
-    <img src="images/notification.png" style="
+    <img src="images/property_exp.png" style="
     height: 60px;
     width: 60px;
     margin-left: 50px;
@@ -210,7 +210,7 @@
  </a>
  <a href="payment_ar.php" >  
 	<div class="col span_2_of_4">
-    <img src="images/support.png" style="
+    <img src="images/payment.png" style="
     height: 60px;
     width: 60px;
     margin-left:50px;
